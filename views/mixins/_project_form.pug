@@ -1,0 +1,10 @@
+mixin projects(project)
+
+    .project 
+        h4 #{project.project_name}
+        a(href= `/project/${project.id}` class="pen") &#9998
+        
+    .subproject
+        ul
+        for subproject in project.subprojects 
+            li &#8250; #{subproject.description}

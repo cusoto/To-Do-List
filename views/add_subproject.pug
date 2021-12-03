@@ -1,0 +1,13 @@
+extends layout 
+
+block content
+
+    h3(class="offset") #{project[0].project_name}
+
+    .center
+        form(action="" method="POST")
+            .form_input 
+                label(for="description") Subproject Description: 
+                input(type="text" name="description" required)
+            .form_input 
+                button(type="submit" class="button_small") CONFIRM

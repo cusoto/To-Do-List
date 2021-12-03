@@ -1,0 +1,45 @@
+extends layout
+
+block content
+    
+    h3(class="offset") #{project[0].project_name}
+
+    form(action="" method="POST")
+        .form_input 
+            label(for="project_name") Project Name: 
+            input(type="text" name="project_name" required value=project[0].project_name)
+
+            a(href=`/complete_project/${project[0].id}` class="check") &#10003
+            a(href=`/delete_project/${project[0].id}` class="cross") &#10799
+        
+        .projectInfo_button
+            a(href=`/add_subproject/${project[0].id}`) Add New Subproject
+
+        - var count = 0
+        for subproject in project[0].subprojects
+            - count++
+            .form_input 
+                label(for="project_name") Project Name: 
+                input(type="text" name="project_name" required value=project[0].project_name)
+
+                a(href=`/complete_project/${project[0].id}` class="check") &#10003
+                a(href=`/delete_project/${project[0].id}` class="cross") &#10799
+            
+            .projectInfo_button
+                a(href=`/add_subproject/${project[0].id}`) Add New Subproject
+
+            - var count = 0
+            for subproject in project[0].subprojects
+                - count++
+                .form_input 
+                    label(for=`description${count-1}` ) Subproject #{count} Description: 
+                    input(type="text" name=`description${count-1}` id=`description${count-1}` required value=subproject.description)
+                
+                    a(href=`/complete_subproject/${project[0].id}/${subproject.id}` class="check") &#10003
+                    a(href=`/delete_subproject/${project[0].id}/${subproject.id}` class="cross") &#10799
+            .form_input 
+                button(type="submit" class="button_small") CONFIRM
+    
+    
+
+

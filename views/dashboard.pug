@@ -1,0 +1,16 @@
+extends layout 
+include mixins/_project_form
+block content 
+    .dashboard_main
+        .dashboard_header   
+            h1= title
+            h3 Hello #{user.user_name}!
+        
+        .dashboard_nav 
+            a(href="/add_project") Add Project
+            a(href="/completed_projects") Completed Projects
+            a(href="/logout") Logout 
+        
+        .dashboard_projects 
+            each project in allProjects 
+                +projects(project)

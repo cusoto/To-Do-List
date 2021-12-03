@@ -1,0 +1,13 @@
+extends layout 
+
+block content 
+
+    h1(class="offset")= title
+    .center
+        form(action="" method="POST")
+            .form_input 
+                label(for="project_name") Project Name: 
+                input(type="text" name="project_name" required)
+            .form_input 
+                button(type="submit" class="button_small") CONFIRM
+

@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .header
+      if user
+        a(href="/dashboard")
+          h1(class="header_title") To Do
+      else
+        h1(class="header_title") To Do
+    - const values = Object.values(flash)
+    - const keys = Object.keys(flash)
+    if keys.length > 0
+        div(class=`message message_${keys}`)
+            span= values
+            span.close_btn(onclick="this.parentNode.remove()") &times;
+
+    block content

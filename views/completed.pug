@@ -1,0 +1,27 @@
+extends layout 
+
+block content 
+    .dashboard_main
+            .dashboard_header   
+                h1= title
+                h3 Hello #{user.user_name}!
+            
+            .dashboard_nav 
+                a(href="/add_project") Add Project
+                a(href="/dashboard") All Projects
+                a(href="/logout") Logout 
+            
+            .dashboard_projects 
+                if allProjects.length == 0
+                    .header 
+                        h4 List is empty
+                each project in allProjects 
+                    .project
+                        h4 #{project.project_name}
+                        a(href=`/revert_project/${project.id}` class="revert") &#8634
+                        a(href=`/delete_project/${project.id}` class="cross") &#10799
+                        
+                    .subproject
+                        ul
+                        for subproject in project.completed_subprojects 
+                            li &#8250; #{subproject.description}

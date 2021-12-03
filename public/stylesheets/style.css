@@ -1,0 +1,163 @@
+body {
+  display: flex;
+  flex-direction: column;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+  background-color: rgb(48, 47, 47);
+}
+
+hr{
+  border:none;
+}
+
+h1,h2,h3,h4,h5, p, a, label {
+  color: honeydew;
+  text-decoration: none;
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+}
+
+.index_main, .login_main, .signup_main, .dashboard_main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  width: 100%;
+}
+
+.dashboard_header{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+
+  width: 80%;
+}
+
+.dashboard_nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+}
+.dashboard_nav a{
+  color:aquamarine;
+  text-decoration: none;
+}
+
+.dashboard_projects{
+  width: 60%;
+}
+
+.project{
+  display: flex;
+  flex-direction: row;
+  justify-content:left;
+  align-items: center;
+}
+
+.project h4 {
+  color:  #7faeffed;
+}
+
+.subproject{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0rem 1rem 1rem 1rem;
+}
+
+.subproject li{
+  padding: 0px 10px 10px 10px;
+  list-style-type: none;
+  color: honeydew;
+}
+
+.index_buttons{
+  flex-direction: row;
+  padding: 1rem;
+}
+
+.projectInfo_button a{
+  padding: 1rem;
+  color: aquamarine;
+}
+.button {
+  color:aliceblue;
+  text-decoration-line: none;
+  background-color: rgb(74, 131, 238);
+  border: none;
+  border-radius: 10px;
+
+  transition-duration: 0.4s;
+
+  padding: 10px;
+  margin: 1rem;
+}
+.button:hover{
+  background-color: rgb(23, 74, 168);
+}
+
+.pen{
+  color:  #61b359;
+}
+
+.check{
+  font-size: 20px;
+  color: #61b359;
+}
+
+.cross{
+  font-size: 36px;
+  color: #ff4d4d;
+}
+
+.revert{
+  font-size: 20px;
+  color: #ffe07f;
+  padding-left: 10px;
+}
+
+.form_input{
+  padding: 1rem;
+}
+input {
+  border: 3px solid #ccc;
+  border-radius: 4px;
+
+  transition-duration: 0.4s;
+  outline: none;
+}
+input:focus {
+  border: 3px solid rgb(23, 74, 168);
+}
+
+.message{
+  padding-left: 10%;
+}
+
+.message_error{
+  color: orangered;
+}
+
+.message_success, .message_info {
+  color:lightskyblue;
+}
+
+.close_btn {
+  color:honeydew;
+  padding-left: 1rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.offset {
+  padding-left: 13%;
+
+}
